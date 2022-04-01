@@ -131,40 +131,33 @@
             <li></li>
           </ul>
         </div>
-      </div>
-    </body>
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+      </div>    
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script type="text/javascript">
       $(document).ready(
         function() {
           //定義一個初始速度
           var sudu = 600;
           var shangdi = false;
-
           //定義json
           var json0 = {"width":"174px","height":"122px","left":"-116px", "top":"100px"};
           var json1 = {"width":"356px","height":"223px","left":"0px", "top":"26px"};
           var json2 = {"width":"642px","height":"273px","left":"274px", "top":"0"};
           var json3 = {"width":"356px","height":"223px","left":"834px", "top":"26px"};
           var json4 = {"width":"174px","height":"122px","left":"1097px", "top":"100px"};
-
           var nowimg = 2;
-
           var timer = setInterval(youanniuyewu,2000);
           $("#youku").mouseenter(
             function() {
               clearInterval(timer);
             }
           );
-
           $("#youku").mouseleave(
             function() {
               clearInterval(timer);
               timer = setInterval(youanniuyewu,2000);
             }
           );
-
-
           $(".you").click(youanniuyewu);
           function youanniuyewu(){
               if(!$(".tuul li").is(":animated") || shangdi == true){
